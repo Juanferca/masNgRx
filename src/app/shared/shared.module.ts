@@ -12,13 +12,14 @@ import { RouterModule } from '@angular/router';
     SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    RouterModule
+    
   ]
 })
 export class SharedModule { }

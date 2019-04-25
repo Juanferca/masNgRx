@@ -1,18 +1,21 @@
 
 
+import { IngresoEgresoState } from './ingreso-egreso.reducer';
 import * as fromIngresoEgreso from './ingresp-egreso.actions';
 import { IngresoEgreso } from './ingreso-egreso.model';
-import { isNgTemplate } from '@angular/compiler';
-import { UNSET_ITEMS } from './ingresp-egreso.actions';
-
+import { AppState } from '../app.reducer';
 
 export interface IngresoEgresoState {
-            items: IngresoEgreso[];
-}
+        items: IngresoEgreso[];
+};
+
+export interface AppState extends AppState {
+        ingresoEgreso: IngresoEgresoState;
+};
 
 const estadoInicial: IngresoEgresoState = {
-    items:[]
-}
+        items:[]
+};
 
 export function ingresoEgresoReducer(state = estadoInicial, action: fromIngresoEgreso.acciones): IngresoEgresoState {
 

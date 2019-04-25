@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../app.reducer';
 import { Subscription } from 'rxjs';
 import { activarLoadingAction, DesActivarLoadingAction } from '../shared/ui.accions';
+import * as fromIngresoEgreso from '../ingreso-egreso/ingreso-egreso.reducer';
 
 
 
@@ -23,7 +24,7 @@ export class IngresoEgresoComponent implements OnInit, OnDestroy {
   cargando: boolean;
 
   constructor(public ingresoEgresoService: IngresoEgresoService,
-              private store: Store<AppState>) { }
+              private store: Store<fromIngresoEgreso.AppState>) { }
 
   ngOnInit() {
 
